@@ -1,42 +1,18 @@
-.accordeon {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-details {
-  width: 150px;
-  transition: width 0.5s ease;
-}
-
-
-summary {
+.accordeon > details > summary {
   list-style: none;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-summary::-webkit-details-marker {
+.accordeon > details > summary::marker,
+.accordeon > details > summary::-webkit-details-marker {
   display: none;
 }
 
-summary img {
-  width: 150px;
-  height: auto;
-  display: block;
-}
-
-
-details[open] {
-  width: 400px;
-  display: flex;
-  gap: 20px;
-}
-
-details[open] summary,
-details[open] div {
-  flex-shrink: 0;
-}
-
-details[open] div {
-  width: 230px;
+.accordeon > details > summary::after {
+  content: "";
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #bfbfbf;
 }
