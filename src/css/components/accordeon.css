@@ -35,7 +35,9 @@ summary img {
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
   border-left: 30px solid #bfbfbf;
+  transition: transform 1.5s ease, border-left-color 0.5s ease;
 }
+
 .accordeon > details[open] > summary::after {
   border-left-color: #ffb6c1;
   transform: rotate(90deg);
