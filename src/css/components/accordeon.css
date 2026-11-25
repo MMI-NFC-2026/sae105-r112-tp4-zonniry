@@ -9,6 +9,13 @@
   background-color: #eeeeee;
   border-radius: 5px;
   padding: 10px;
+  height: 115px; /* Hauteur de l'image fermée (à ajuster selon la hauteur exacte de tes images) */
+  overflow: hidden;
+  transition: height 1.5s ease;
+}
+
+.accordeon > details[open] {
+  height: 230px; /* Hauteur totale carte ouverte avec le texte */
 }
 
 .accordeon > details > summary {
