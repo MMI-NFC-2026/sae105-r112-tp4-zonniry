@@ -1,5 +1,19 @@
+.accordeon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 260px;
+}
+
+.accordeon > details {
+  background-color: #eeeeee;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 .accordeon > details > summary {
   list-style: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -8,6 +22,12 @@
 .accordeon > details > summary::marker,
 .accordeon > details > summary::-webkit-details-marker {
   display: none;
+}
+
+summary img {
+  width: 150px;
+  height: auto;
+  display: block;
 }
 
 .accordeon > details > summary::after {
