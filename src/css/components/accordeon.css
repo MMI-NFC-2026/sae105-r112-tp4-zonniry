@@ -1,3 +1,29 @@
-/**
-* Accordeon
-*/
+/* Conteneur des éléments de l'accordéon (adapte le sélecteur selon ton HTML, ex: .accordeon ou main) */
+.accordeon {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+details {
+  /* État fermé : largeur réduite à la taille de l'image */
+  width: 150px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+/* Masquer la flèche par défaut de <summary> */
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
