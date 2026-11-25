@@ -27,3 +27,12 @@ summary img {
   height: auto;
   display: block;
 }
+details[open] {
+ 
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+  flex-shrink: 0;
+}
