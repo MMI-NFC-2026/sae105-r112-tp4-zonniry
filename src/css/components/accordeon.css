@@ -1,4 +1,3 @@
-/* Conteneur des éléments de l'accordéon (adapte le sélecteur selon ton HTML, ex: .accordeon ou main) */
 .accordeon {
   display: flex;
   gap: 20px;
@@ -6,13 +5,12 @@
 }
 
 details {
-  /* État fermé : largeur réduite à la taille de l'image */
   width: 150px;
   overflow: hidden;
-  transition: width 0.3s ease;
+  transition: width 1s ease;
 }
 
-/* Masquer la flèche par défaut de <summary> */
+
 summary {
   list-style: none;
   cursor: pointer;
@@ -27,12 +25,19 @@ summary img {
   height: auto;
   display: block;
 }
+
+
 details[open] {
- 
   width: 400px;
   display: flex;
-  flex-direction: row;
   gap: 20px;
 }
+
+details[open] summary,
+details[open] div {
   flex-shrink: 0;
+}
+
+details[open] div {
+  width: 230px;
 }
