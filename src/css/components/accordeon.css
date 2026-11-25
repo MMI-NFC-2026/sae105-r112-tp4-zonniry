@@ -16,3 +16,7 @@
   border-bottom: 30px solid transparent;
   border-left: 30px solid #bfbfbf;
 }
+.accordeon > details[open] > summary::after {
+  border-left-color: #ffb6c1;
+  transform: rotate(90deg);
+}
